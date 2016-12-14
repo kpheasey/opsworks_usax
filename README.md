@@ -2,7 +2,12 @@
 
 TODO: Enter the cookbook description here.
 
-# Custom JSON
+## Update Package
+```sh
+berks update && berks package cookbooks.tar.gz && git add . && git commit -m 'package update' && git push
+```
+
+## Custom JSON
 
 ## Web Layer
 ```json
