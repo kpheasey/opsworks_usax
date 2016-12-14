@@ -21,10 +21,6 @@ berks update && berks package cookbooks.tar.gz && git add . && git commit -m 'pa
       "database": {
         "adapter": "mysql"
       },
-     "framework": {
-       "envs_in_console": true,
-       "migrate": false
-     },
      "appserver": {
        "adapter": "puma",
        "application_yml": true
