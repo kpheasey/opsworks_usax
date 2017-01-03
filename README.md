@@ -21,10 +21,17 @@ berks update && berks package cookbooks.tar.gz && git add . && git commit -m 'pa
       "database": {
         "adapter": "mysql"
       },
-     "appserver": {
-       "adapter": "puma",
-       "application_yml": true
-     }
+      "appserver": {
+        "adapter": "puma",
+        "application_yml": true
+      },
+      "whenever": {
+        "roles": ["default"]
+      },
+      "worker": {
+       "adapter": "sidekiq",
+       "process_count": 1
+      }
     }
   }
 }
