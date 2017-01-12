@@ -36,3 +36,9 @@ berks update && berks package cookbooks.tar.gz && git add . && git commit -m 'pa
   }
 }
 ```
+
+### Solr Layer
+```json
+{
+}
+```
