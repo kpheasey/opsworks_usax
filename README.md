@@ -23,7 +23,8 @@ berks update && berks package cookbooks.tar.gz && git add . && git commit -m 'pa
       },
       "appserver": {
         "adapter": "puma",
-        "application_yml": true
+        "application_yml": true,
+        "preload_app": false
       },
       "whenever": {
         "roles": ["default"]
