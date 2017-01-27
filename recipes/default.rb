@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: opsworks_usax
+# Cookbook Name:: usax
 # Recipe:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.

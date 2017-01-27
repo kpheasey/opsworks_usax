@@ -1,0 +1,25 @@
+{
+  "applications": ["usax"],
+  "deploy":  {
+    "usax": {
+      "global": {
+        "environment": "staging"
+      },
+      "database": {
+        "adapter": "mysql"
+      },
+      "appserver": {
+        "adapter": "puma",
+        "application_yml": true,
+        "preload_app": false
+      },
+      "whenever": {
+        "roles": ["default"]
+      },
+      "worker": {
+        "adapter": "sidekiq",
+        "process_count": 1
+      }
+    }
+  }
+}
