@@ -7,6 +7,7 @@ cookbook 'opsworks_ruby', '~> 1.2.1', git: 'https://github.com/kpheasey/opsworks
 cookbook 'opsworks_whenever', git: 'https://github.com/kpheasey/opsworks_whenever.git'
 cookbook 'cloudwatch-logs', '~> 0.0.7'
 cookbook 'logrotate', '~> 2.1.0'
+cookbook 'solr_6', '~> 1.0.1'
 cookbook 'swap', '~> 0.3.8'
 
 metadata
