@@ -13,12 +13,66 @@
         "application_yml": true,
         "preload_app": false
       },
+      "webserver": {
+        "log_dir": "/srv/www/usax/shared/log"
+      },
       "whenever": {
         "roles": ["default"]
       },
       "worker": {
         "adapter": "sidekiq",
-        "process_count": 1
+        "process_count": 1,
+        "config": {
+          "logfile": "./log/sidekiq.log",
+          "concurrency": 15,
+          "timeout": 300
+        }
+      }
+    }
+  },
+  "cwlogs": {
+    "logfiles": {
+      "usax-rails": {
+        "log_stream_name": "{instance_id}-{hostname}",
+        "log_group_name": "staging-usax-rails",
+        "file": "/srv/www/usax/shared/log/staging.log",
+        "datetime_format": "%d/%b/%Y:%H:%M:%S %z",
+        "initial_position":"end_of_file"
+      },
+      "usax-nginx-access": {
+        "log_stream_name": "{instance_id}-{hostname}",
+        "log_group_name": "staging-usax-nginx-access",
+        "file": "/srv/www/usax/shared/log/staging.theusax.com.access.log",
+        "datetime_format": "%d/%b/%Y:%H:%M:%S %z",
+        "initial_position":"end_of_file"
+      },
+      "usax-nginx-error": {
+        "log_stream_name": "{instance_id}-{hostname}",
+        "log_group_name": "staging-usax-nginx-error",
+        "file": "/srv/www/usax/shared/log/staging.theusax.com.error.log",
+        "datetime_format": "%d/%b/%Y:%H:%M:%S %z",
+        "initial_position":"end_of_file"
+      },
+      "usax-puma-stdout": {
+        "log_stream_name": "{instance_id}-{hostname}",
+        "log_group_name": "staging-usax-puma-stdout",
+        "file": "/srv/www/usax/shared/log/puma.stdout.log",
+        "datetime_format": "%d/%b/%Y:%H:%M:%S %z",
+        "initial_position":"end_of_file"
+      },
+      "usax-puma-stderr": {
+        "log_stream_name": "{instance_id}-{hostname}",
+        "log_group_name": "staging-usax-puma-stderr",
+        "file": "/srv/www/usax/shared/log/puma.stderr.log",
+        "datetime_format": "%d/%b/%Y:%H:%M:%S %z",
+        "initial_position":"end_of_file"
+      },
+      "usax-sidekiq": {
+        "log_stream_name": "{instance_id}-{hostname}",
+        "log_group_name": "staging-usax-sidekiq",
+        "file": "/srv/www/usax/shared/log/sidekiq.log",
+        "datetime_format": "%d/%b/%Y:%H:%M:%S %z",
+        "initial_position":"end_of_file"
       }
     }
   }
