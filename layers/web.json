@@ -6,7 +6,8 @@
         "environment": "staging"
       },
       "database": {
-        "adapter": "mysql"
+        "adapter": "mysql",
+        "pool": 25
       },
       "appserver": {
         "adapter": "puma",
