@@ -20,7 +20,6 @@ sudo su solr
 
 Create the core:
 ```sh
-sudo su solr
 cd /opt/solr
 bin/solr create -c usax
 ```
