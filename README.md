@@ -30,7 +30,7 @@ your development machine in `PROJECT_ROOT/solr/configsets/sunspot/conf`
 Remove the auto-generated `managed_schema` file.
 
 ```sh
-rm /var/solr/data/usax/conf/managed_schema
+rm /var/solr/data/usax/conf/managed-schema
 ```
 
 Restart the service
