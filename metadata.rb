@@ -7,6 +7,7 @@ long_description 'Installs/Configures opsworks_usax'
 version '0.1.0'
 
 depends 'cloudwatch-logs'
+depends 'datadog'
 depends 'logrotate'
 depends 'opsworks_ruby'
 depends 'opsworks_whenever'
