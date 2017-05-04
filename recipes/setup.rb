@@ -19,6 +19,5 @@ package 'tmux'
 package 'imagemagick'
 
 include_recipe 'nodejs'
-include_recipe 'yarn'
 
 include_recipe 'opsworks_ruby::setup'

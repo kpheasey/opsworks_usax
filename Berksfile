@@ -11,6 +11,5 @@ cookbook 'opsworks_whenever', git: 'https://github.com/kpheasey/opsworks_wheneve
 cookbook 'ruby-ng', '~> 0.3.0'
 cookbook 'solr_6', '~> 1.0.1'
 cookbook 'swap', '~> 0.3.8'
-cookbook 'yarn', '~> 0.3.0'
 
 metadata
