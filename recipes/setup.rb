@@ -12,12 +12,17 @@ swap_file '/mnt/swap' do
   persist true
 end
 
+# package repositories
+apt_repository 'yarn' do
+  uri        'https://dl.yarnpkg.com/debian/pubkey.gpg'
+  components ['main', 'stable']
+end
 
-# Install dependencies
+# packages
+include_recipe 'nodejs'
 package 'htop'
 package 'tmux'
 package 'imagemagick'
-
-include_recipe 'nodejs'
+package 'yarn'
 
 include_recipe 'opsworks_ruby::setup'
