@@ -10,7 +10,7 @@ include_recipe 'usax::swap'
 
 # packages
 include_recipe 'nodejs'
-include_recipe 'usax::yarn'
+include_recipe 'yarn'
 package 'htop'
 package 'tmux'
 package 'imagemagick'
