@@ -6,11 +6,11 @@
 
 prepare_recipe
 
-include_recipe 'swap'
+include_recipe 'usax::swap'
 
 # packages
 include_recipe 'nodejs'
-include_recipe 'yarn'
+include_recipe 'usax::yarn'
 package 'htop'
 package 'tmux'
 package 'imagemagick'
