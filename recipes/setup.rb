@@ -9,7 +9,8 @@ prepare_recipe
 include_recipe 'usax::swap'
 
 # packages
-include_recipe 'nodejs'
+include_recipe 'nodejs::repo'
+package 'nodejs'
 package 'htop'
 package 'tmux'
 package 'imagemagick'
