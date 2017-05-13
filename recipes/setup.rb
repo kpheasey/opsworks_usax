@@ -6,23 +6,13 @@
 
 prepare_recipe
 
-# Create swap
-swap_file '/mnt/swap' do
-  size    2048 # MBs
-  persist true
-end
-
-# package repositories
-apt_repository 'yarn' do
-  uri        'https://dl.yarnpkg.com/debian/pubkey.gpg'
-  components ['main', 'stable']
-end
+include_recipe 'swap'
 
 # packages
 include_recipe 'nodejs'
+include_recipe 'yarn'
 package 'htop'
 package 'tmux'
 package 'imagemagick'
-package 'yarn'
 
 include_recipe 'opsworks_ruby::setup'
