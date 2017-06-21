@@ -1,7 +1,7 @@
 source 'https://supermarket.chef.io'
 
 cookbook 'cloudwatch-logs', '~> 0.0.7'
-cookbook 'datadog', '~> 2.7.0'
+cookbook 'datadog', '~> 2.10.0'
 cookbook 'deployer', '~> 0.1.1'
 cookbook 'logrotate', '~> 2.1.0'
 cookbook 'nginx', '~> 2.7.6'
